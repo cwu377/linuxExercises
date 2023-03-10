@@ -1,5 +1,4 @@
 #!/bin/bash
 F=Property_Tax_Roll.csv
-filtered_F=$(grep -e 'MADISON SCHOOLS' $F)
-cutted_F=$(echo $filtered_F | cut -d, -f 7)
-echo "$filtered_F" | awk '{ total += $7 } END { print total/NR }' 
+cut_F=$(grep  -e 'MADISON SCHOOLS' $F  | cut -d, -f7)
+echo "$cut_F" | awk '{ total += $1 } END { print total/NR }' 
