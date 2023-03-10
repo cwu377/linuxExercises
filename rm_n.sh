@@ -1,2 +1,2 @@
 #!/bin/bash
-find $1 -size +$2k -delete
+file=$(find ./$1 -type f -size +${2}c -delete)
